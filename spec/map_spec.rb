@@ -20,7 +20,7 @@ describe Map do
   describe ":distance" do
     it "should calculate distance between two sets of coordinates" do
       alpha = stub
-      beta = stub
+      beta  = stub
       Geocoder::Calculations.should_receive(:distance_between).with(alpha, beta)
       Map.distance_between(alpha, beta)
     end

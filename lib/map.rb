@@ -2,7 +2,7 @@ require 'geocoder'
 class Map
 
   def self.search(terms)
-    Array(Geocoder.search(terms)).first
+    (Geocoder.search(terms) || []).first
   end
 
   def self.distance_between(first, second)

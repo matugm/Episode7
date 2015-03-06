@@ -1,6 +1,6 @@
 class SalesPerson
-
   attr_reader :cities
+
   def initialize
     @cities = []
   end
@@ -10,6 +10,6 @@ class SalesPerson
   end
 
   def route
-    CalculatesRoute.calculate(cities)
+    RouteCalculator.calculate(cities)
   end
 end
