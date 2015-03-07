@@ -4,10 +4,9 @@ class RouteCalculator
     route = []
     route << remaining_points.shift
 
-    while remaining_points.any? do
+    until remaining_points.empty? do
       next_point = shortest_distance(route.last, remaining_points)
-      next_index = remaining_points.index(next_point)
-      route << remaining_points.delete_at(next_index)
+      route << remaining_points.delete(next_point)
     end
 
     route
